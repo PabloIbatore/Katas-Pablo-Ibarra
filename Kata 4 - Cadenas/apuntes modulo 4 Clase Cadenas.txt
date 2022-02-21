@@ -1,0 +1,172 @@
+Python 3.10.2 (tags/v3.10.2:a58ebcc, Jan 17 2022, 14:12:15) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> fact = 'The moon has no atmosphere.'
+>>> fact + ' No sound can be heard on the Moon.'
+'The moon has no atmosphere. No sound can be heard on the Moon.'
+>>> two_facts = fact + 'No sound can be heard on the Moon.'
+>>> two_facts
+'The moon has no atmosphere.No sound can be heard on the Moon.'
+>>> multiline = "Facts abpit the Moon: \n There is no atmosphere.\n There is no sound."
+>>> print(multiline)
+Facts abpit the Moon:
+ There is no atmosphere.
+ There is no sound.
+>>> Multiline = """Facts about the moon: ... There is no atmosphere.  ... there is no sound."""
+>>> print(multiline)
+Facts abpit the Moon:
+ There is no atmosphere.
+ There is no sound.
+>>>
+>>> 'Temperatures and facts about the moon'.title()
+'Temperatures And Facts About The Moon'
+>>>
+>>> heading = 'temperatures and facts about the moon'
+>>> heading.title()
+'Temperatures And Facts About The Moon'
+>>>
+>>> temperatures = '''Daylight: 260 F ... Nighttime: -280 F'''
+>>> temperatures .split()
+['Daylight:', '260', 'F', '...', 'Nighttime:', '-280', 'F']
+>>>
+>>> temperatures .split('\n')
+['Daylight: 260 F ... Nighttime: -280 F']
+>>>
+>>> 'Moon' in 'This text will describe facts and challenges with space travel'
+False
+>>> 'Moon' in 'This text will describe facts about the Moon'
+True
+>>>
+>>> temperatures = """Saturn has a daytime temperature of -170 degrees Celsius, ... while Mars has -28 Celsius."""
+>>> temperatures.find('Moon')
+-1
+>>> temperatures.find('Mars')
+68
+>>> temperatures.count('Mars')
+1
+>>> temperatures.count('Moon')
+0
+>>>
+>>> "The Moon And The Earth".lower()
+'the moon and the earth'
+>>>
+>>> "The Moon And The Earth".upper()
+'THE MOON AND THE EARTH'
+>>>
+>>> temperatures = 'Mars Average Temperature: -60 C'
+>>> parts = temperatures.split(':')
+>>> parts
+['Mars Average Temperature', ' -60 C']
+>>> parts;_[Ñ[
+...
+... :;ÑLKK[¨
+  File "<stdin>", line 3
+    :;ÑLKK[¨
+     ^
+SyntaxError: invalid syntax
+>>> parts[-1]
+' -60 C'
+>>>
+>>>
+>>> mars_temperature = 'The highest temperature on Mars is about 30 C'
+>>> for item in mars_temperature.split():
+... if item.isnumeric():
+  File "<stdin>", line 2
+    if item.isnumeric():
+    ^
+IndentationError: expected an indented block after 'for' statement on line 1
+>>> print(item)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'item' is not defined. Did you mean: 'iter'?
+>>> mars_temperature = 'The highest temperature on Mars is about 30 C'
+>>> for item in mars_temperature.split():
+...     if item.isnumeric():
+...        print(item)
+...
+30
+>>>
+>>> '-60'.startwith('-')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'startwith'. Did you mean: 'startswith'?
+>>> '-60' .startwith('-')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'str' object has no attribute 'startwith'. Did you mean: 'startswith'?
+>>>
+>>> '-60'.startswith('-')
+True
+>>>
+>>> if "30 C".endswith("C"):
+...    print("This temperature is in Celsius")
+...
+This temperature is in Celsius
+>>>
+>>> 'Saturn has a daytime temperature of -170 degrees Celsius, while Mars has -28 Celsius.'.replace('Celsius', 'C')
+'Saturn has a daytime temperature of -170 degrees C, while Mars has -28 C.'
+>>>
+>>> text = 'Temperatures on the Moon can vary widly.'
+>>> 'temperatures' in text
+False
+>>> 'temperatures' in text.lower()
+True
+>>>
+>>> moon_facts = ['The Moon is drifting away from the Earth.', 'On average, the Moon is moving about 4cm every year']'\n'.joint(moon_facts)
+  File "<stdin>", line 1
+    moon_facts = ['The Moon is drifting away from the Earth.', 'On average, the Moon is moving about 4cm every year']'\n'.joint(moon_facts)
+                                                                                                                     ^^^^
+SyntaxError: invalid syntax
+>>> moon_facts = ['The Moon is drifting away from the Earth.', 'On average, the Moon is moving about 4cm every year']
+>>> '\n'.join(moon_facts)
+'The Moon is drifting away from the Earth.\nOn average, the Moon is moving about 4cm every year'
+>>> '\n' .join(moon_facts)
+'The Moon is drifting away from the Earth.\nOn average, the Moon is moving about 4cm every year'
+>>>
+>>>
+>>> moon_facts = ['The Moon is drifting away from the Earth.' , 'On average, the Moon is moving about 4cm every year']
+>>> '\n' .join(moon_facts)
+'The Moon is drifting away from the Earth.\nOn average, the Moon is moving about 4cm every year'
+>>>
+>>>
+>>> mass_percentage = '1/6'
+>>> print('On the Moon, you would weigh about %s of your weight on Eart' % mass_percentage)
+On the Moon, you would weigh about 1/6 of your weight on Eart
+>>>
+>>>
+>>> print("""Both sides of the %s get the same amount of sunlight, but only one side is seen from %s because the % rotates around its own axis when it orbits %s.""" % ('Moon', 'Earth', 'Moon', 'Eart'))
+Both sides of the Moon get the same amount of sunlight, but only one side is seen from Earth because the 'Moon'otates around its own axis when it orbits Eart.
+>>> print("""Both sides of the %s get the same amount of sunlight, but only one side is seen from %s because the %s rotates around its own axis when it orbits %s.""" % ('Moon', 'Earth', 'Moon', 'Eart'))
+Both sides of the Moon get the same amount of sunlight, but only one side is seen from Earth because the Moon rotates around its own axis when it orbits Eart.
+>>>
+>>> mass_percentage = '1/6'
+>>> print('On the Moon, you would weigh about {} of your weight on Earth'.format(mass_percentage))
+On the Moon, you would weigh about 1/6 of your weight on Earth
+>>>
+>>> print("""You are lighter on the {0}, because on the {0}
+... you would weigh about {1} of your weight on Earth""".format("Moon", mass_percentage))
+You are lighter on the Moon, because on the Moon
+you would weigh about 1/6 of your weight on Earth
+>>>
+>>> print("""You are lighter on the {moon}, because on the {moon}
+... you would weigh about {mass} of your weight on Earth""".format(moon="Moon", mass=mass_percentage))
+You are lighter on the Moon, because on the Moon
+you would weigh about 1/6 of your weight on Earth
+>>>
+>>> print(f'On the Moon, you would weigh about {mass_percentage} of your weight on Earth')
+On the Moon, you would weigh about 1/6 of your weight on Earth
+>>>
+>>> round(100/6, 1)
+16.7
+>>>
+>>> print(f'On the Moon, you would weigh about {round(100/6, 1)}% of your weight on Earth')
+On the Moon, you would weigh about 16.7% of your weight on Earth
+>>>
+>>> subject = 'interesting facts about the moon'
+>>> f'{subject.title()}
+  File "<stdin>", line 1
+    f'{subject.title()}
+    ^
+SyntaxError: unterminated string literal (detected at line 1)
+>>> f'{subject.title()}'
+'Interesting Facts About The Moon'
+>>>
